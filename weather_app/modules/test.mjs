@@ -2,18 +2,21 @@
 
 // import * as data from "./modules/data.mjs";
 import * as fs from "fs";
+import path from "path";
 
 let weather = "";
 try {
-  const data = fs.readFileSync("db.txt", "utf8");
+  const data = fs.readFileSync(path.resolve("db.txt"), "utf8");
   weather = JSON.parse(data);
 } catch (err) {
   console.log(err);
 }
 
+// console.log(weather);
+
 let newLocation = {
   location: {
-    name: "Kolkata",
+    name: "Goa",
     lat: 22.57,
     lon: 88.37,
   },
@@ -46,17 +49,20 @@ let updateRec = (cityName, humidity) => {
   rec.current.humidity = humidity;
   //   console.log("rec : ", rec.current.humidity);
 };
-
-console.log("Deleted Data :", deleteRec("Delhi"));
+deleteRec("Delhi");
 console.log("Local Data : ", weather);
 addRec();
 console.log("Adding Location : ", weather);
 updateRec("Kolkata", 0);
 console.log("Update Location : ", weather);
 
-fs.writeFile("db.txt", JSON.stringify(weather), (err, data) => {
-  if (err) {
-    console.log(err);
+fs.writeFileSync(
+  path.resolve("db.txt"),
+  JSON.stringify(weather),
+  (err, data) => {
+    if (err) {
+      console.log(err);
+    }
+    console.log("Data Updated!");
   }
-  console.log("Data Updated!");
-});
+);
