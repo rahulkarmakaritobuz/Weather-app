@@ -1,0 +1,21 @@
+
+  {
+    "user1": {
+      "name": "rahul",
+      "dept": "CSE",
+      "id": 1
+    },
+
+    "user2": {
+      "name": "soumyadeep",
+      "dept": "IT",
+      "id": 2
+    },
+
+    "user3": {
+      "name": "dibyo",
+      "dept": "ECE",
+      "id": 3
+    }
+  }
+
