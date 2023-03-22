@@ -14,7 +14,6 @@ let readFile = (...value1) => {
   console.log("value : ", value);
   return value;
 };
-
 let createFolder = (...value1) => {
   console.log("Creating folder...");
   fs.mkdirSync(value1[0], (err) => {
