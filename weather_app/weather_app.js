@@ -136,12 +136,9 @@ function getWeather() {
         feelsLikeC: 21.8,
         feelsLikef: 71.2,
       },
-    }
+    },
   ];
-  let result= weatherData.find((data) => data.location.name === 'Africa');
+  let result = weatherData.find((data) => data.location.name === "Africa");
   console.log(result.current.tempF);
-//   return result;
 }
 getWeather();
-// console.log(getWeather("Dubai"));
-

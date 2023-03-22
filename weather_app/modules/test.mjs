@@ -1,6 +1,3 @@
-// import * as data from "./data.mjs";
-
-// import * as data from "./modules/data.mjs";
 import * as fs from "fs";
 import path from "path";
 
@@ -11,8 +8,6 @@ try {
 } catch (err) {
   console.log(err);
 }
-
-// console.log(weather);
 
 let newLocation = {
   location: {
@@ -47,7 +42,6 @@ let addRec = () => {
 let updateRec = (cityName, humidity) => {
   let rec = weather.find((x) => x.location.name === cityName);
   rec.current.humidity = humidity;
-  //   console.log("rec : ", rec.current.humidity);
 };
 deleteRec("Delhi");
 console.log("Local Data : ", weather);

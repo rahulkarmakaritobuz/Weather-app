@@ -1,4 +1,3 @@
-// let weatherData;s
 export let weatherData = [
   {
     location: {
