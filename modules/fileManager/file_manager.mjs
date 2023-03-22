@@ -67,7 +67,6 @@ process.stdin.on("data", (data) => {
       case "2": {
         data[1] = process.cwd() + "/" + data[1];
         console.log("3rd input : ", data[1]);
-        // console.log(process.cwd());
         createFile(data[1].trim(), data[2]);
         break;
       }
@@ -79,7 +78,6 @@ process.stdin.on("data", (data) => {
       case "4": {
         data[1] = process.cwd() + "/" + data[1];
         data[2] = process.cwd() + "/" + data[2];
-        // console.log(" i am called");
         renameFolder(data[1].trim(), data[2].trim());
         break;
       }
