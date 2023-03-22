@@ -14,9 +14,7 @@ let readFile = (...value1) => {
   console.log("value : ", value);
   return value;
 };
-let goto = (...value1) => {
-  process.chdir(value1[0]);
-};
+
 let createFolder = (...value1) => {
   console.log("Creating folder...");
   fs.mkdirSync(value1[0], (err) => {
@@ -48,8 +46,6 @@ let currentPath = () => {
   return path.resolve();
 };
 
-let input = process.argv;
-// console.log(input[2], ",", data[1], ",", data[2]);
 process.stdin.on("data", (data) => {
   data = data.toString().split(" ");
   console.log(data);
@@ -60,7 +56,6 @@ process.stdin.on("data", (data) => {
   console.log(
     "Option --> (?File Name1,(?File Name2)) --> (?value) --> (?Path)\n"
   );
-  // let key = process.argv;
   try {
     switch (data[0]) {
       case "1": {
@@ -118,5 +113,4 @@ process.stdin.on("data", (data) => {
   } catch (err) {
     console.log("Give the input in correct way!");
   }
-  // process.exit();
 });
