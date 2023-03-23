@@ -43,6 +43,7 @@ let updateRec = (cityName, humidity) => {
   let rec = weather.find((x) => x.location.name === cityName);
   rec.current.humidity = humidity;
 };
+
 deleteRec("Delhi");
 console.log("Local Data : ", weather);
 addRec();

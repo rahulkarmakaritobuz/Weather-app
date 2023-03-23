@@ -1,4 +1,3 @@
-// import PATH from PATH;
 import fs from "fs";
 
 // Asynchronous read
