@@ -1,3 +1,4 @@
 backup/
 node_modules/
 modules/api_server/
+modules/file_manager/async/

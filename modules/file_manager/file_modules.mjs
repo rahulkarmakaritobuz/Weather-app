@@ -1,4 +1,10 @@
+import * as path from "path";
+import * as process from "process";
 import * as fs from "fs";
+
+export const findPath = (data) => {
+  return path.join(process.cwd(), data);
+};
 
 export const createFile = (...value1) => {
   fs.writeFile(value1[0], value1[1], (err) => {
